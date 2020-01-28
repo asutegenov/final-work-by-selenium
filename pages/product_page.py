@@ -23,3 +23,9 @@ class ProductPage(BasePage):
             alert.accept()
         except NoAlertPresentException:
             print("No second alert presented")
+
+    def price_basket_equal_price_product(self):
+        basket_price_link = self.browser.find_element(*ProductPageLocators.BASKET_PRICE).text
+        product_price_link = self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE).text
+
+        assert basket_price_link == product_price_link, "Price don't aqual"
