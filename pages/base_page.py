@@ -50,9 +50,15 @@ class BasePage():
     def should_be_login_link(self):
         assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Login link is not presented"
 
+    def should_be_authorized_user(self):
+        assert self.is_element_present(*BasePageLocators.USER_ICON), "User icon is not presented, " \
+                                                                        "probably unauthorized user"
+
 
 class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
 
     GO_TO_BASKET = (By.CSS_SELECTOR, ".basket-mini .btn")
+
+    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
