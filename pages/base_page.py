@@ -38,9 +38,13 @@ class BasePage():
             return False
 
         return True
-    
+
     def go_to_login_page(self):
         link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)
+        link.click()
+    
+    def go_to_basket(self):
+        link = self.browser.find_element(*BasePageLocators.GO_TO_BASKET)
         link.click()
     
     def should_be_login_link(self):
@@ -50,3 +54,5 @@ class BasePage():
 class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+
+    GO_TO_BASKET = (By.CSS_SELECTOR, ".basket-mini .btn")

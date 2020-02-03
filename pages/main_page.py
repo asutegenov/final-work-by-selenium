@@ -3,6 +3,7 @@ from pages.base_page import BasePage
 from selenium.webdriver.common.by import By
 from pages.base_page import BasePageLocators
 from pages.login_page import LoginPage
+from pages.locators import BasketPageLocators
 
 class MainPage(BasePage):
     def __init__(self, *args, **kwargs):

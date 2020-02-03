@@ -15,3 +15,7 @@ class ProductPageLocators():
 
     BASKET_NAME = (By.CSS_SELECTOR, ".alert-success .alertinner strong")
     PRODUCT_NAME = (By.CSS_SELECTOR, ".product_page h1")
+
+class BasketPageLocators():
+    BASKET_HAVE_ITEMS = (By.CSS_SELECTOR, ".basket-title")
+    BASKET_HAVE_A_TEXT = (By.CSS_SELECTOR, "#content_inner>p")
